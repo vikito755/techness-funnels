@@ -1,13 +1,13 @@
 "use client"
 import Image from "next/image";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 
 interface IQuizQuestion {
     question: string;
     answers: string[];
-    completePercentage: number;
+    completeState: string;
 }
 
 interface IQuizProps {
@@ -29,13 +29,15 @@ export default function Quiz({questions}: IQuizProps) {
     }
   return (
     
-      <div className="flex flex-col items-center lg:w-5/6 w-full h-full rounded-3x border-2 rounded-3xl py-10 px-5">
+      <div className="flex flex-col items-center lg:w-5/6 w-full md:h-5/6 sm:h-screen rounded-3x border-2 rounded-3xl py-10 px-5">
         <Image src="/techness-black.jpg" alt="Techness logo" width={200} height={100}></Image>
         <h1 className="font-extrabold text-5xl py-8 text-center">{questions[questionIndex].question}</h1>
         <div className="flex items-start w-3/4 bg-gray-200 rounded-full h-8">
-            <div className={`bg-blue-600 h-8 rounded-full w-[${questions[questionIndex].completePercentage}`} style={
+            <div className={`bg-blue-600 h-8 rounded-full 
+            ${questions[questionIndex].completeState}`}
+             style={
               {
-                backgroundImage: 'linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);'
+                backgroundImage: 'linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)'
               }
             }></div>
             </div>
@@ -43,7 +45,7 @@ export default function Quiz({questions}: IQuizProps) {
             <div>
           </div>
 
-          <div className="w-3/4 py-4">
+          <form className="w-3/4 py-4">
             {questions[questionIndex].answers.map((answer, index) => {
                     return (
                         <div className="flex pt-5 pl-10" key={index}>
@@ -52,7 +54,7 @@ export default function Quiz({questions}: IQuizProps) {
                         </div>
                     )
                 })}
-            </div>
+            </form>
         
           <button
             onClick={goToNextStep}

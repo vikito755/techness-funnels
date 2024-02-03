@@ -15,7 +15,7 @@ export default function Home() {
             "No, I don't.",
             "Why do I even need one?" 
           ],
-          completePercentage: 33,
+          completeState: 'w-1/3',
         },
         {
           'question': 'Are you or your team training to recognize email scams?',
@@ -24,7 +24,7 @@ export default function Home() {
             "No, we are not.",
             "We used to." 
           ],
-          completePercentage: 66,
+          completeState: 'w-2/3',
         },
         {
           'question': 'Do you want to create a secure future for your company?',
@@ -32,7 +32,7 @@ export default function Home() {
             "Yes, I do.",
             "No, I do not."
           ],
-          completePercentage: 100,
+          completeState: 'w-full',
         },
       ]}
     ></Quiz>
