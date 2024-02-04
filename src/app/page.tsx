@@ -51,6 +51,8 @@ export default function Home() {
     email: ''
   });
 
+  const formDataKeys = Object.keys(formData);
+
   const {
     register,
     handleSubmit,
@@ -75,7 +77,7 @@ export default function Home() {
     <main className="flex w-screen h-screen justify-center items-center">
       <form className="flex flex-col items-center lg:w-5/6 w-full md:h-5/6 sm:h-screen rounded-3x border-2 rounded-3xl py-10 px-5">
       <Image src="/techness-black.jpg" alt="Techness logo" width={200} height={100}></Image>
-        <h1 className="font-extrabold text-5xl py-8 text-center">{questions[0].question}</h1>
+        <h1 className="font-extrabold text-5xl py-8 text-center">{questions[questionIndex].question}</h1>
         <div className="flex items-start w-3/4 bg-gray-200 rounded-full h-8">
             <div className={`bg-blue-600 h-8 rounded-full 
             ${questions[questionIndex].completeState}`}
@@ -96,7 +98,7 @@ export default function Home() {
                               (e) => {
                                 setFormData({
                                   ...formData,
-                                  firstQuestion: e.target.value
+                                  [formDataKeys[questionIndex]]: e.target.value
                                 })
                               }
                             } type="radio" value={`${answer}`} name={`radio-button`} className="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600"></input>
