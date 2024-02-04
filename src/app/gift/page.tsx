@@ -1,12 +1,11 @@
 import Image from "next/image";
-import { questions } from "./data/questions";
-import Quiz from "./_sections/Quiz";
+import { BsArrowRight } from "react-icons/bs";
 
-export default function Home() {
-
+export default function EmailCapture() {
   return (
     <main className="flex w-screen h-screen justify-center items-center">
-      <Quiz />
+
+    <>Capture email.</>
     </main>
   );
 }

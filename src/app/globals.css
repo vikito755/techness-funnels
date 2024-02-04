@@ -17,6 +17,29 @@
 }
 
 body {
-  
+
 }
 
+/* .meter { 
+  height: 5px;
+  position: relative;
+  background: #f3efe6;
+  overflow: hidden;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+} */
+
+
+/* 
+.progress {
+  transition: width 0.5s ease;
+}
+
+@keyframes progressBar {
+0% { width: 0; }
+100% { width: 100%; }
+}
+ */
