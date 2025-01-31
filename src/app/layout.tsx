@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Techness",
-  description: "Bringing your security to the highest mark.",
+  title: "Ронева",
+  description: "Вашият партньор в недвижимите имоти..",
 };
 
 export default function RootLayout({
@@ -16,11 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <head>
-      <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Techness</title>
-    </head>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ронева</title>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
