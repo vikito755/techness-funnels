@@ -8,33 +8,18 @@ export interface Question {
 
 export const questions: Question[] = [
   {
-    question: "В кой град искате да закупите имот?",
+    question: "Which is the capical of Germany?",
     type: "multiple-choice",
-    answers: ["София", "Варна", "Пловдив"],
+    answers: ["Berlin", "Dortmund", "Essen"],
   },
   {
-    question: "Какъв е вашият бюджет?",
+    question: "How many colors does a rainbow have?",
     type: "multiple-choice",
-    answers: ["€50K - €100K", "€100K - €150K", "€150K+"],
+    answers: ["7", "8", "9"],
   },
   {
-    question: "В какъв срок бихте искали да купите?",
+    question: "How long can a whale hold it's breath?",
     type: "multiple-choice",
-    answers: ["1 месец.", "1-3 месеца.", "6+ месеца"],
-  },
-  {
-    question: "На кой телефон да ви се обадим?",
-    type: "input",
-    answers: [],
-  },
-  {
-    question: "На кой имейл ще е удобно да се свържем с вас?",
-    type: "input",
-    answers: [],
-  },
-  {
-    question: "Вашите имена.",
-    type: "input",
-    answers: [],
+    answers: ["3 hours", "1 day", "2 weeks"],
   },
 ];

@@ -11,16 +11,13 @@ const Thanks: FunctionComponent<ThanksProps> = () => {
   }, []);
   return (
     <>
-      <h1>
-        Благодарим Ви. Екипът на Ронева ще се свърже с вас възможно най-скоро.
-        (Това ще е с друг дизайн)
-      </h1>
+      <h1>Did you like it?</h1>
       <br />
       <a
-        href="https://www.roneva.bg/bg/"
+        href="https://triviawhizz.com/general-knowledge/"
         className="bg-primary-500 block hover:bg-primary-700 text-white font-bold py-2 px-4 rounded"
       >
-        Разгледай Още Имоти
+        Play more quizzes!
       </a>
     </>
   );
